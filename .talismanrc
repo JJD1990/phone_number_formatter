@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: spec/formatter_spec.rb
+  checksum: 642b94d4bb6618fa4da81eae4d757e92b98855def3220ebc355fa18e60670e79
+version: "1.0"
