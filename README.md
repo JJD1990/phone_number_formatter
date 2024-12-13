@@ -1,6 +1,28 @@
 ## Phone Number Formatter Solution Explanation
 ===========================================
 
+## Example usage
+The purpose of this module is to correctly format any uk number to match how the Twilio api expects them.
+Below are some examples on how to run this module. 
+
+In your terminal, run `irb`
+
+Then run `Formatter::PhoneNumber::UK.format('your number here')`
+
+Some examples are:
+```ruby
+Formatter::PhoneNumber::UK.format('07123456789')  # returns "+447123456789"
+
+Formatter::PhoneNumber::UK.format(' 07123 456 789 ') # returns  "+447123456789"
+```
+Examples of invalid inputs are:
+
+```ruby
+Formatter::PhoneNumber::UK.format('071234567890123')
+
+`validate_final_format': Invalid phone number: Phone number must be exactly 13 characters in +447 format (Formatter::PhoneNumber::InvalidNumberError)
+```
+
 ## Ruby Methods vs. Regex
 
 Initially, regex seemed like a natural fit for validating and transforming the phone number. However, after reviewing
